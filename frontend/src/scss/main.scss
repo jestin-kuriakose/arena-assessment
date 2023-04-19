@@ -1,0 +1,266 @@
+$primary: #b37749;
+
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('../../fonts/Gotham-Book.woff2') format('woff2'),
+        url('../../fonts/Gotham-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('../../fonts/Gotham-Bold.woff2') format('woff2'),
+        url('../../fonts/Gotham-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('../../fonts/Gotham-Light.woff2') format('woff2'),
+        url('../../fonts/Gotham-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('../../fonts/Gotham-Medium.woff2') format('woff2'),
+        url('../../fonts/Gotham-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+:root {
+    font-family: 'Gotham' !important; 
+    font-style: normal;
+}
+
+
+//Header Section
+.navbar-cont {
+    font-weight: normal;
+    font-size: 18px;
+    z-index: 99;
+    height: 120px;
+    padding: 0;
+    box-shadow: 0px 8px 19px 0px rgba(0,0,0,0.06);
+    .phone {
+        font-size: 18px;
+        font-weight: 500;
+    }
+}
+
+//Hero Section
+.hero {
+    //min-width: 1460px;
+    font-weight: normal;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    h1{
+        font-size: 58px;
+        line-height: 72px;
+        margin-bottom: 48px;
+    }
+    p{
+        font-size: 21.5px;
+        line-height: 36px;
+        margin-bottom: 48px;
+    }
+    button {
+        font-size: 18px;
+        padding: 1rem;
+    }
+
+    .img-container {
+        // width: 500px;
+        // height: 500px;
+        // background-color: black; -258 204
+        
+
+        .img1 {
+            top: -258px;
+            right: 276px;
+            height: 652px;
+            width: 398px;
+            object-fit: contain;
+            z-index: 1;
+        }
+
+        .img2 {
+            top: 204px;
+            right: 276px;
+            height: 652px;
+            width: 398px;
+            background-size: cover;
+            object-fit: contain;
+            z-index: 2;
+        }
+        .img3 {
+            top: -114px;
+            right: 0;
+            height: 522px;
+            width: 262px;
+            object-fit: contain;
+            z-index: 1;
+        }
+        .img4 {
+            top: 407px;
+            right: 0;
+            height: 558px;
+            width: 262px;
+            background-size: cover;
+            object-fit: contain;
+            z-index: 1;
+        }
+        @include media-breakpoint-down(lg) {
+            .img1, .img2, .img3, .img4 {
+                display: none;
+            }
+         }
+         @include media-breakpoint-up(xl) {
+            .img1 {
+                top: -329px;
+            }
+            .img2 {
+                top: 129px;
+            }
+        }
+    
+    }
+
+    
+}
+    
+
+
+
+// Property Section
+
+.property {
+    //min-width: 1460px;
+    position: relative;
+    z-index: 100;
+    background-color: #f1f3f8;
+
+    &_container {
+        margin-left: 78px;
+        margin-right: 54px;
+        padding: 0;
+    }
+
+    h3{
+        font-size: 18px;
+        line-height: 27px;
+        color: #b37749;
+        font-weight: 500;
+        margin: 0;
+
+        img {
+            padding-left: 10px;
+            padding-bottom: 5px;
+        }
+    }
+    h2 {
+        font-size: 54px;
+        line-height: 77px;
+        font-weight: 500;
+        margin-bottom: 60px;
+    }
+    p{
+        margin: 0;
+        padding: 0;
+    }
+    .load-more a {
+        font-size: 27px;
+        color: black;
+        text-decoration: none;
+        font-weight: 500;
+        cursor: pointer;
+    }
+}
+
+//Listing Section
+.listing-section {
+    font-weight: 500;
+
+    .listing {
+
+        .carousel-item img{
+            // max-width: 332px;
+            // object-fit: cover;
+        }
+        @include media-breakpoint-down(md) {
+            .carousel-item img{
+                // max-width: 271px;
+            }
+        }
+        .listing-body {
+            .listing-title {
+                font-size: 21.5px;
+                line-height: 36px;
+                color: black;
+            }
+            .listing-subtitle {
+                font-size: 16px;
+                line-height: 36px;
+                color: $primary;
+            }
+            .listing-price {
+                color: #2bb245;
+                font-weight: bold;
+            }
+            .info {
+                background-color: #f1f3f8;
+                padding: 5px 10px;
+
+                h4 {
+                    font-size: 16px;
+
+                    p {
+                        font-weight: normal;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Contact Section
+.contact-section {
+    position: relative;
+    z-index: 100;
+    background-color: #fff;
+    font-weight: 500;
+    h3{
+        font-size: 18px;
+        line-height: 27px;
+        color: #b37749;
+        margin: 0;
+    }
+    h2 {
+        font-size: 54px;
+        line-height: 72px;
+        margin-bottom: 60px;
+    }
+    img {
+        padding-left: 10px;
+        padding-bottom: 5px;
+    }
+    input, select, textarea {
+        background-color: #f1f3f8;
+    }
+    button {
+        font-size: 18px;
+        line-height: 27px;
+    }
+}
